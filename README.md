@@ -15,12 +15,6 @@ A robust and scalable ATM management system built with .NET 8.0, implementing Cl
 
 The project follows Clean Architecture principles and is divided into four main layers:
 
-📦 ATM.Management
-┣ 📂 ATM.Domain
-┣ 📂 ATM.Application
-┣ 📂 ATM.Infrastructure
-┗ 📂 ATM.Presentation.WebAPI
-
 ### Key Technologies
 
 - **.NET 8.0**
