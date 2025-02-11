@@ -22,11 +22,11 @@
 
     <!-- ITMO is DEV code style analyzers -->
     <ItemGroup>
-        <PackageReference Include="SourceKit.Analyzers.Collections" />
-        <PackageReference Include="SourceKit.Analyzers.Enumerable" />
-        <PackageReference Include="SourceKit.Analyzers.MemberAccessibility" />
-        <PackageReference Include="SourceKit.Analyzers.Nullable" />
-        <PackageReference Include="SourceKit.Analyzers.Properties" />
+        <PackageReference Remove="SourceKit.Analyzers.Collections" />
+        <PackageReference Remove="SourceKit.Analyzers.Enumerable" />
+        <PackageReference Remove="SourceKit.Analyzers.MemberAccessibility" />
+        <PackageReference Remove="SourceKit.Analyzers.Nullable" />
+        <PackageReference Remove="SourceKit.Analyzers.Properties" />
     </ItemGroup>
     
     <ItemGroup>

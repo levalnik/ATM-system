@@ -1,5 +1,5 @@
 using ATM.Application.Extensions;
-using ATM.Infrastructure.Extensions;
+using ATM.Infrastructure.DataAccess.Extensions;
 using ATM.Presentation.Console.Extensions;
 using ATM.Presentation.Console.Scenarios;
 using Microsoft.Extensions.DependencyInjection;

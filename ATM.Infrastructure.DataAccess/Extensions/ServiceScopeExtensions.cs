@@ -1,7 +1,7 @@
 using Itmo.Dev.Platform.Postgres.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ATM.Infrastructure.Extensions;
+namespace ATM.Infrastructure.DataAccess.Extensions;
 
 public static class ServiceScopeExtensions
 {
