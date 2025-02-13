@@ -14,10 +14,8 @@ using ATM.Infrastructure.DataAccess.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-// Добавляем сервисы приложения
 builder.Services.AddApplication();
 
-// Добавляем инфраструктуру
 builder.Services.AddInfrastructureDataAccess(options =>
 {
     options.Host = "localhost";
@@ -28,15 +26,12 @@ builder.Services.AddInfrastructureDataAccess(options =>
     options.SslMode = "Prefer";
 });
 
-// Регистрация вспомогательных сервисов
 builder.Services.AddScoped<CurrentAccountModeService>();
 
-// Регистрация репозиториев
 builder.Services.AddScoped<IOperationRepository, OperationRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 
-// Регистрация сервисов приложения
 builder.Services.AddScoped<IAccountModeService, AccountModeService>();
 builder.Services.AddScoped<IOperationService, OperationService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -44,19 +39,16 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 
 builder.Services.AddControllers();
 
-// Добавление Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 WebApplication app = builder.Build();
 
-// Применяем миграции
 using (IServiceScope scope = app.Services.CreateScope())
 {
     scope.UseInfrastructureDataAccess();
 }
 
-// Конфигурация HTTP pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
