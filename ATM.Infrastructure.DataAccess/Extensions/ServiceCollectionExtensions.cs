@@ -1,13 +1,13 @@
 using ATM.Application.Abstractions.Repositories;
-using ATM.Infrastructure.Extensions.Plugins;
-using ATM.Infrastructure.Extensions.Repositories;
+using ATM.Infrastructure.DataAccess.Plugins;
+using ATM.Infrastructure.DataAccess.Repositories;
 using Itmo.Dev.Platform.Common.Extensions;
 using Itmo.Dev.Platform.Postgres.Extensions;
 using Itmo.Dev.Platform.Postgres.Models;
 using Itmo.Dev.Platform.Postgres.Plugins;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ATM.Infrastructure.Extensions;
+namespace ATM.Infrastructure.DataAccess.Extensions;
 
 public static class ServiceCollectionExtensions
 {

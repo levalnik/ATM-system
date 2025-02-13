@@ -1,0 +1,19 @@
+### Получить баланс пользователя
+GET http://localhost:5000/api/user/balance
+Accept: application/json
+
+### Снять деньги
+POST http://localhost:5000/api/user/withdraw
+Content-Type: application/json
+
+{
+  "value": 500
+}
+
+### Пополнить баланс
+POST http://localhost:5000/api/user/top-up
+Content-Type: application/json
+
+{
+  "value": 1000
+}
