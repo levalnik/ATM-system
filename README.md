@@ -1,42 +1,42 @@
-# ATM Management System 🏧
+# CashMachineSystem
+# Задание: Реализовать систему банкомата
+# Функциональные требования
 
-A robust and scalable ATM management system built with .NET 8.0, implementing Clean Architecture principles and modern development practices.
+- создание счета
+- просмотр баланса счета
+- снятие денег со счета
+- пополнение счета
+- просмотр истории операций
 
-## 🚀 Features
+# Не функциональные требования
+- интерактивный консольный интерфейс
+- возможность выбора режима работы (пользователь, администратор)
+    - при выборе пользователя должны быть запрошены данные счета (номер, пин)
+    - при выборе администратора должен быть запрошен системный пароль
+        - при некорректном вводе пароля - система прекращает работу
+- системный пароль должен быть параметризуем
+- при попытке выполнения некорректных операций, должны выводиться сообщения об ошибке
+- данные должны быть персистентно сохранены в базе данных (PostgreSQL)
+- использование каких-либо ORM библиотек - запрещено
+- приложение должно иметь хексагональную архитектуру
 
-- **ATM Management**: Create, update, and monitor ATMs
-- **Balance Operations**: Handle deposits and withdrawals
-- **Real-time Monitoring**: Track ATM status and transactions
-- **Secure Authentication**: JWT-based authentication and authorization
-- **Comprehensive Logging**: Track all system operations
-- **API Documentation**: Full Swagger/OpenAPI support
+# Test cases
+- снятие денег со счёта
+    - при достаточном балансе проверить что сохраняется счёт с корректно обновлённым балансом
+    - при недостаточном балансе сервис должен вернуть ошибку
+- пополнение счёта
+    - проверить что сохраняется счёт с корректно обновлённым балансом
+- проверка денег на счете
+  - проверяет валидность значения при снятии денег со счета
 
-## 🏗 Architecture
+Данные тесты должны проверять бизнес логику, они не должны как-либо зависить от базы данных или консольного представления.
 
-The project follows Clean Architecture principles and is divided into four main layers:
+В данных тестах необходимо использовать моки репозиториев.
 
-### Key Technologies
+# Использованные NuGet-пакеты
 
-- **.NET 8.0**
-- **Entity Framework Core**
-- **PostgreSQL**
-- **MediatR**
-- **AutoMapper**
-- **FluentValidation**
-- **JWT Authentication**
-- **Swagger/OpenAPI**
-
-## 📐 Project Structure
-
-- **ATM.Domain**: Contains enterprise logic and entities
-- **ATM.Application**: Contains business logic and interfaces
-- **ATM.Infrastructure**: Implements interfaces and contains data access logic
-- **ATM.Presentation.WebAPI**: Contains API controllers and configuration
-
-## 🔒 Security
-
-- JWT-based authentication
-- Role-based authorization
-- Input validation
-- Exception handling
-- Secure communication
+[SpectreConsole](https://spectreconsole.net/), 
+[NpgSql](https://www.npgsql.org/), 
+[Moq](https://www.nuget.org/packages/Moq), 
+[Itmo.Dev.Platform.Postgres](https://github.com/itmo-is-dev/platform/tree/master/src/Itmo.Dev.Platform.Postgres), 
+[Microsoft DI](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/)
