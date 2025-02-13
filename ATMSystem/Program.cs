@@ -12,7 +12,7 @@ collection
     .AddInfrastructureDataAccess(configuration =>
     {
         configuration.Host = "localhost";
-        configuration.Port = 6432;
+        configuration.Port = 5432;
         configuration.Username = "postgres";
         configuration.Password = "postgres";
         configuration.Database = "postgres";

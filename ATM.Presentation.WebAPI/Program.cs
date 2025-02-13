@@ -20,11 +20,9 @@ builder.Services.AddApplication();
 // Добавляем инфраструктуру
 builder.Services.AddInfrastructureDataAccess(options =>
 {
-    string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    Uri uri = new Uri(connectionString ?? throw new InvalidOperationException("Connection string is not found"));
-    options.Host = uri.Host;
-    options.Port = uri.Port;
-    options.Database = uri.Segments[1];
+    options.Host = "localhost";
+    options.Port = 5432;
+    options.Database = "postgres";
     options.Username = builder.Configuration["Database:Username"] ?? "postgres";
     options.Password = builder.Configuration["Database:Password"] ?? "postgres";
     options.SslMode = "Prefer";
@@ -65,7 +63,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();
