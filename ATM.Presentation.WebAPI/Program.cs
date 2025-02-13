@@ -21,7 +21,7 @@ builder.Services.AddApplication();
 builder.Services.AddInfrastructureDataAccess(options =>
 {
     options.Host = "localhost";
-    options.Port = 5432;
+    options.Port = 6432;
     options.Database = "postgres";
     options.Username = builder.Configuration["Database:Username"] ?? "postgres";
     options.Password = builder.Configuration["Database:Password"] ?? "postgres";
