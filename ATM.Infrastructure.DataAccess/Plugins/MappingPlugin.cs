@@ -2,7 +2,7 @@ using ATM.Application.Models.Operations;
 using Itmo.Dev.Platform.Postgres.Plugins;
 using Npgsql;
 
-namespace ATM.Infrastructure.Extensions.Plugins;
+namespace ATM.Infrastructure.DataAccess.Plugins;
 
 public class MappingPlugin : IDataSourcePlugin
 {

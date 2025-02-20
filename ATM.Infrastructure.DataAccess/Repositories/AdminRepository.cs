@@ -5,7 +5,7 @@ using Itmo.Dev.Platform.Postgres.Connection;
 using Itmo.Dev.Platform.Postgres.Extensions;
 using Npgsql;
 
-namespace ATM.Infrastructure.Extensions.Repositories;
+namespace ATM.Infrastructure.DataAccess.Repositories;
 
 public class AdminRepository : IAdminRepository
 {

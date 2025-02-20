@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# 
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{3DB12F6C-143E-4086-BCB2-2EC3461BC353}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Packages.props = Directory.Packages.props
@@ -33,6 +34,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{67BBF7AB-D389-4B51-B57F-53EBE47FB564}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Tests", "ATM.Tests\ATM.Tests.csproj", "{7E1D6474-EEBF-476B-823A-924B3E1B8440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Presentation.WebAPI", "ATM.Presentation.WebAPI\ATM.Presentation.WebAPI.csproj", "{EC35F842-0CD1-40B1-B367-39B89E7F2B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,5 +89,9 @@ Global
 		{7E1D6474-EEBF-476B-823A-924B3E1B8440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E1D6474-EEBF-476B-823A-924B3E1B8440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E1D6474-EEBF-476B-823A-924B3E1B8440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC35F842-0CD1-40B1-B367-39B89E7F2B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC35F842-0CD1-40B1-B367-39B89E7F2B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC35F842-0CD1-40B1-B367-39B89E7F2B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC35F842-0CD1-40B1-B367-39B89E7F2B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
